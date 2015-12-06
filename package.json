@@ -1,12 +1,13 @@
 {
-  "name": "vue-starter",
+  "name": "Alternativet",
   "version": "1.0.0",
-  "description": "A starter for vue.js single page apps",
+  "description": "Front-end for Alternativet",
+  "author": "Leo Valen",
   "author": "Koen Calliauw",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/layer7be/vue-starter.git"
+    "url": "git://github.com/leovalen/alternativet.git"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.0.0",

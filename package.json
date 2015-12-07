@@ -10,6 +10,7 @@
     "url": "git://github.com/leovalen/alternativet.git"
   },
   "devDependencies": {
+    "laravel-elixir": "^4.0.0",
     "bootstrap-sass": "^3.0.0",
     "elixir-vuemaker": "^0.1.0",
     "envify": "^3.4.0",

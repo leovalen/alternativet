@@ -49,6 +49,13 @@ body {
 	margin-bottom: 80px;
 }
 
+.navbar-brand {
+    min-width: 220px;
+	background: transparent url('/images/alternativet.png') no-repeat;
+	background-size: 182px 42px;
+    background-position: 15px 11px;
+}
+
 .footer {
 	background-color: #f5f5f5;
 	border-top: 1px solid #e7e7e7;

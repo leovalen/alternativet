@@ -16,5 +16,7 @@ elixir(function (mix) {
        'resources/assets/js/components/**/*.+(js|css|html)',
        'resources/assets/js/app.+(js|css|html)'
      ], 'resources/assets/js/compiled')
-     .browserify('bootstrap.js', 'public/js/app.js')
+     .browserify('bootstrap.js', 'public/js/app.js');
+
+  mix.copy('resources/assets/images', 'public/images');
 })

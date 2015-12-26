@@ -1,7 +1,7 @@
 var config = {
   env: 'staging',
   api: {
-    base_url: 'https://api.staging.alternativet.io/api',
+    base_url: 'https://api.staging.alternativet.io',
     defaultRequest: {
       headers: {
         'X-Requested-With': 'rest.js',

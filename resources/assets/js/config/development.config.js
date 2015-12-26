@@ -1,7 +1,7 @@
 var config = {
   env: 'development',
   api: {
-    base_url: 'http://api.development.alternativet.io/api',
+    base_url: 'http://api.development.alternativet.io',
     defaultRequest: {
       headers: {
         'X-Requested-With': 'rest.js',

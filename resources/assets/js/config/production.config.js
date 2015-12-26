@@ -1,7 +1,7 @@
 var config = {
   env: 'production',
   api: {
-    base_url: 'https://api.alternativet.io/api',
+    base_url: 'https://api.alternativet.io',
     defaultRequest: {
       headers: {
         'X-Requested-With': 'rest.js',

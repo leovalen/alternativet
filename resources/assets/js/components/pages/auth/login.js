@@ -21,7 +21,7 @@ module.exports = {
         },
         function (response) {
           that.messages = []
-          if (response.status && response.status.code === 401) that.messages.push({type: 'danger', message: 'Sorry, you provided invalid credentials'})
+          if (response.status && response.status.code === 401) that.messages.push({type: 'danger', message: 'Beklager, brukernavn eller passord er feil.'})
         }
       )
     },

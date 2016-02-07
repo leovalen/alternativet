@@ -1,0 +1,22 @@
+.manifest {
+    text-align: center;
+}
+
+.manifest h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 2.4em;
+    text-transform: uppercase;
+}
+
+.manifest p {
+    font-size: 1.3em;
+    margin-bottom: 1.4em;
+}
+
+.manifest p span.lead {
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}

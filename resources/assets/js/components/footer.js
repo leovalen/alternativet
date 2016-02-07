@@ -2,9 +2,9 @@ module.exports = {
   data: function () {
     return {
       links: {
-        facebook: '',
-        twitter: '',
-        github: ''
+        facebook: 'alternativet.party',
+        twitter: 'Alternativet_no',
+        github: 'partialternativet'
       }
     }
   }

@@ -4,6 +4,8 @@ module.exports = {
     return {
       user: {
         name: null,
+        birth_date: null,
+        postal_code: null,
         email: null,
         password: null,
         password_confirmation: null

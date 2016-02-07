@@ -3,8 +3,8 @@
  */
  
 $border-radius-base: 0;
-$brand-primary: #2B5A84;
-$active-icon-color: #6CC94D;
+$brand-primary: #288feb;
+$active-icon-color: #28cc75;
 $btn-border-radius-base: 4px;
 $btn-font-weight: 400;
 $base-font-weight: 400;
@@ -50,10 +50,6 @@ body {
 	margin-bottom: 80px;
 }
 
-.container td, li, div, p {
-	font-weight: 400;
-}
-
 .placeholder {
 	display: block;
 	margin-top: 8%;
@@ -71,9 +67,9 @@ body {
 }
 
 .navbar-brand {
-    min-width: 220px;
-	background: transparent url('/images/alternativet.png') no-repeat;
-	background-size: 182px 42px;
+    min-width: 280px;
+	background: transparent url('/images/alternativet-500px.png') no-repeat;
+	background-size: 250px 56px;
     background-position: 15px 11px;
 }
 

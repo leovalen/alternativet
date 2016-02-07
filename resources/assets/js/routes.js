@@ -53,6 +53,9 @@ module.exports = {
           }
         }
       },
+      '/manifest': {
+        component: require('./compiled/pages/manifest.vue')
+      },
       '/terms': {
         component: require('./compiled/pages/terms.vue')
       },

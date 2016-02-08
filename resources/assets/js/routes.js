@@ -6,10 +6,6 @@ module.exports = {
       '/auth': {
         component: require('./compiled/pages/auth.vue'),
         subRoutes: {
-          '/login': {
-            component: require('./compiled/pages/auth/login.vue'),
-            guest: true
-          },
           '/register': {
             component: require('./compiled/pages/auth/register.vue'),
             guest: true
@@ -24,18 +20,24 @@ module.exports = {
           }
         }
       },
-      '/home': {
-        component: require('./compiled/pages/home.vue'),
+      '/om': {
+        component: require('./compiled/pages/om.vue'),
         subRoutes: {
           '/': {
-            component: require('./compiled/pages/home/home.vue')
+            component: require('./compiled/pages/om/om.vue')
           },
-          '/welcome': {
-            component: require('./compiled/pages/home/welcome.vue')
+            '/om': {
+                component: require('./compiled/pages/om/om.vue')
+            },
+          '/kontakt': {
+            component: require('./compiled/pages/om/kontakt.vue')
           },
-          '/about': {
-            component: require('./compiled/pages/home/about.vue')
-          }
+          '/folk': {
+            component: require('./compiled/pages/om/folk.vue')
+          },
+            '/organisasjon': {
+                component: require('./compiled/pages/om/organisasjon.vue')
+            },
         }
       },
       '/dogs': {
@@ -53,6 +55,10 @@ module.exports = {
           }
         }
       },
+      '/login': {
+        component: require('./compiled/pages/login.vue'),
+        guest: true
+      },
       '/manifest': {
         component: require('./compiled/pages/manifest.vue')
       },
@@ -69,7 +75,7 @@ module.exports = {
 
     router.alias({
       '': '/placeholder',
-      '/auth': '/auth/login'
+      '/auth': '/login'
     })
 
     router.beforeEach(function (transition) {

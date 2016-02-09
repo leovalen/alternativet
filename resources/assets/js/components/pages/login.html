@@ -2,16 +2,6 @@
 <div class="container app-screen">
 
     <div class="col-md-12">
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-6">
-            <header>
-                <h3>Logg inn</h3>
-            </header>
-        </div>
-    </div>
-    <div class="col-md-12">
         <form class="form-horizontal" role="form">
             <div id="alerts" v-if="messages.length > 0">
                 <div v-for="message in messages" class="alert alert-{{ message.type }} alert-dismissible" role="alert">

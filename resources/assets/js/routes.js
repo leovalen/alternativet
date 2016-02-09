@@ -6,10 +6,6 @@ module.exports = {
       '/auth': {
         component: require('./compiled/pages/auth.vue'),
         subRoutes: {
-          '/register': {
-            component: require('./compiled/pages/auth/register.vue'),
-            guest: true
-          },
           '/profile': {
             component: require('./compiled/pages/auth/profile.vue'),
             auth: true
@@ -59,6 +55,10 @@ module.exports = {
         component: require('./compiled/pages/login.vue'),
         guest: true
       },
+        '/register': {
+            component: require('./compiled/pages/register.vue'),
+            guest: true
+        },
       '/manifest': {
         component: require('./compiled/pages/manifest.vue')
       },

@@ -1,7 +1,6 @@
-<div class="panel-heading">
-	Bli medlem i Alternativet
-</div>
-<div class="panel-body">
+<nav-component></nav-component>
+<div class="container app-screen">
+
 	<form class="form-horizontal" role="form" v-on:submit="registerUser">
 
 		<div id="alerts" v-if="messages.length > 0">
@@ -60,4 +59,6 @@
 			</div>
 		</div>
 	</form>
-</div>
+
+</div><!-- End container -->
+<footer-component></footer-component>

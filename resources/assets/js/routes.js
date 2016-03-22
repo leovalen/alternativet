@@ -68,6 +68,9 @@ module.exports = {
       '/placeholder': {
         component: require('./compiled/pages/placeholder.vue')
       },
+      '/sporsmal': {
+        component: require('./compiled/pages/sporsmal.vue')
+      },
       '/home': {
         component: require('./compiled/pages/home.vue')
       },

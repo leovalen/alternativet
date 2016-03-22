@@ -68,13 +68,16 @@ module.exports = {
       '/placeholder': {
         component: require('./compiled/pages/placeholder.vue')
       },
+      '/home': {
+        component: require('./compiled/pages/home.vue')
+      },
       '*': {
         component: require('./compiled/pages/404.vue')
       }
     })
 
     router.alias({
-      '': '/placeholder',
+      '': '/home',
       '/auth': '/login'
     })
 

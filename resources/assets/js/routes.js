@@ -71,6 +71,9 @@ module.exports = {
       '/sporsmal': {
         component: require('./compiled/pages/sporsmal.vue')
       },
+      '/politikk': {
+        component: require('./compiled/pages/politikk.vue')
+      },
       '/home': {
         component: require('./compiled/pages/home.vue')
       },

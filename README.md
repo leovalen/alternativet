@@ -1,14 +1,7 @@
-# Vue.js Starter Website
-This package serves as a starter for you to build a single page Vue.js website. It uses vue-router and browserify to keep everyting nicely separated, and makes use of Laravel Elixir to avoid a huge Gulpfile (Laravel Elixir has nothing to do with the Laravel Framework, this package has no relation to that whatsoever).
+# www.alternativet.party
+Front end for the Alternativet web site and member services.
 
-A companion Laravel starter API is available [here](https://github.com/layer7be/vue-starter-laravel-api). The purpose is to have a Laravel API using Dingo and JWT Authentication. The API just serves the purpose of getting it working, so you can then adapt and plug in your own API (or simply adjust it to your needs, of course)
-
-Online demo: http://vue.layer7.be/ (login as admin@example.com / admin)
-
-[Companion Laravel API](https://github.com/layer7be/vue-starter-laravel-api)
-
-Note: I made an experimental branch on Vue.js 1.0.0.rc [here](https://github.com/layer7be/vue-starter/tree/1.0.0). This will become master as soon
-as 1.0.0 becomes stable.
+This project is based on the [Vue starter](https://github.com/layer7be/vue-starter) repo and uses Vue.js, vue-router and browserify to keep everyting nicely separated, and makes use of Laravel Elixir to avoid a huge Gulpfile.
 
 ## Usage
 
@@ -21,7 +14,6 @@ npm install
 
 ### Step 2: Decide on the environment
 In resources/assets/js/config you will find configuration files for the various environments you may have. By default, the "development" environment file will be loaded. If you want to load another configuration, you need to export the environment variable APP_ENV to be what you want to want the configuration to be. To do so easily you can precede the command gulp (or gulp watch) from the next step with APP_ENV=production if you want to build for production.
-
 
 ### Step 3: Run Gulp
 Gulp will compile the Sass stylesheets and run browserify. All the source files are in the 'resources' folder and will publish the results to the 'public' folder.
@@ -64,6 +56,3 @@ password: admin
 
 ## License
 MIT License. See LICENSE file.
-
-## Credits
-Thanks Taylor Otwell for your Laravel Spark styling. I used some of it.

@@ -8587,6 +8587,28 @@ body {
   line-height: 1.5em;
 }
 
+.home .cta {
+  color: #666;
+  position: absolute;
+  top: 250px;
+  left: 190px;
+}
+
+.home .cta ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home .cta ul li {
+  font-size: 1.8em;
+  font-weight: 200;
+}
+
+.home .cta p.local {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
 .home .map {
   width: 340px;
 }

@@ -1,14 +1,58 @@
 <nav-component></nav-component>
 <div class="container home">
     <div class="col-md-6">
-        <header>
-            <h1 class="lead">
-                <strong>Ny politisk kultur</strong><br />
-                fordi det trengs nye tanker.
-            </h1>
-        </header>
-        <p>Bli med i samtalen for å skape et<br />
-        alternativ til det etablerte.</p>
+        <div class="main">
+            <header>
+                <h1 class="lead">
+                    <strong>Ny politisk kultur</strong><br />
+                    fordi det trengs nye tanker.
+                </h1>
+            </header>
+            <p>
+                Bli med i samtalen for å skape et<br />
+                alternativ til det etablerte.
+            </p>
+        </div>
+
+        <form class="form-horizontal" role="form" v-on:submit="registerUser">
+
+            <div id="alerts" v-if="messages.length > 0">
+                <div v-for="message in messages" class="alert alert-{{ message.type }} alert-dismissible" role="alert">
+                    {{ message.message }}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-11">
+                    <input placeholder="Navn" type="text" class="form-control" v-model="user.name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-11">
+                    <input placeholder="E-postadresse" type="text" class="form-control" v-model="user.email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-11">
+                    <input placeholder="Mobilnummer" type="text" class="form-control" v-model="user.phone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-11">
+                    <button type="submit" class="btn btn-success btn-block">
+                        Opprett konto
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="map">
+            <img src="http://api.development.alternativet.io/graphics/members-map-norway.svg" alt="Medlemmer i Norge" />
+        </div>
     </div>
 </div>
 <footer-component></footer-component>

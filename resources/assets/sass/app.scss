@@ -12,6 +12,8 @@ $font-family-sans-serif: proxima-nova, Helvetica, Arial, sans-serif !default;
 $font-size-base: 14px;
 $navbar-height: 65px;
 
+
+
 /*
  * Bootstrap CSS...
  */
@@ -66,6 +68,13 @@ body {
 	}
 }
 
+.navbar-nav > li > a {
+	margin-top: 13px;
+	padding-top: 10px !important;
+	padding-bottom: 0 !important;
+	height: 42px;
+}
+
 .navbar-brand {
     min-width: 280px;
 	background: transparent url('/images/alternativet-500px.png') no-repeat;
@@ -104,10 +113,36 @@ body {
 	color: #3090e7;
 }
 
-.nav li {
-
-}
-
 .nav li a.auth.outline {
 	border: 1px solid #3090e7;
+	border-radius: 4px;
+}
+
+.home {
+
+	.main {
+		color: #666;
+
+		h1.lead {
+			font-size: 2.7em;
+			font-weight: 200;
+
+			strong {
+				font-weight: 500;
+			}
+		}
+
+		p {
+			font-weight: 200;
+			font-size: 1.8em;
+			line-height: 1.5em;
+		}
+	}
+
+	.map {
+		width: 340px;
+		img {
+			width: 100%;
+		}
+	}
 }

@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "laravel-elixir": "^4.0.0",
-    "bootstrap-sass": "^3.0.0",
+    "bootstrap-sass": "^3.5.0",
     "elixir-vuemaker": "^0.1.0",
     "envify": "^3.4.0",
     "gulp": "^3.8.8",

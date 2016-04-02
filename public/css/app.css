@@ -8476,6 +8476,55 @@ input.form-control {
   text-align: left;
 }
 
+.home .main {
+  color: #666;
+}
+
+.home .main h1.lead {
+  font-size: 2.7em;
+  font-weight: 200;
+}
+
+.home .main h1.lead strong {
+  font-weight: 500;
+}
+
+.home .main p {
+  font-weight: 200;
+  font-size: 1.8em;
+  line-height: 1.5em;
+}
+
+.home .cta {
+  color: #666;
+  position: absolute;
+  top: 250px;
+  left: 190px;
+}
+
+.home .cta ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home .cta ul li {
+  font-size: 1.8em;
+  font-weight: 200;
+}
+
+.home .cta p.local {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.home .map {
+  width: 340px;
+}
+
+.home .map img {
+  width: 100%;
+}
+
 /**
  * Components
  */
@@ -8602,53 +8651,4 @@ body {
 .nav li a.auth.outline {
   border: 1px solid #3090e7;
   border-radius: 4px;
-}
-
-.home .main {
-  color: #666;
-}
-
-.home .main h1.lead {
-  font-size: 2.7em;
-  font-weight: 200;
-}
-
-.home .main h1.lead strong {
-  font-weight: 500;
-}
-
-.home .main p {
-  font-weight: 200;
-  font-size: 1.8em;
-  line-height: 1.5em;
-}
-
-.home .cta {
-  color: #666;
-  position: absolute;
-  top: 250px;
-  left: 190px;
-}
-
-.home .cta ul {
-  list-style: none;
-  padding: 0;
-}
-
-.home .cta ul li {
-  font-size: 1.8em;
-  font-weight: 200;
-}
-
-.home .cta p.local {
-  font-size: 1.3em;
-  font-weight: 500;
-}
-
-.home .map {
-  width: 340px;
-}
-
-.home .map img {
-  width: 100%;
 }

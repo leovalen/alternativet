@@ -13,7 +13,6 @@ $font-family-sans-serif: proxima-nova, Helvetica, Arial, sans-serif !default;
 $font-size-base: 14px;
 $navbar-height: 65px;
 
-
 /*
  * Bootstrap CSS...
  */
@@ -31,6 +30,7 @@ $navbar-height: 65px;
 @import "elements/panels";
 @import "elements/tables";
 @import "elements/tooltips";
+@import "pages/home";
 
 /**
  * Components
@@ -117,60 +117,4 @@ body {
 .nav li a.auth.outline {
 	border: 1px solid #3090e7;
 	border-radius: 4px;
-}
-
-.home {
-
-	.main {
-		color: #666;
-
-		h1.lead {
-			font-size: 2.7em;
-			font-weight: 200;
-
-			strong {
-				font-weight: 500;
-			}
-		}
-
-		p {
-			font-weight: 200;
-			font-size: 1.8em;
-			line-height: 1.5em;
-		}
-	}
-
-	.cta {
-		color: #666;
-
-		position: absolute;
-		top: 250px;
-		left: 190px;
-
-		h2 {
-
-		}
-
-		ul {
-			list-style: none;
-			padding: 0;
-
-			li {
-				font-size: 1.8em;
-				font-weight: 200;
-			}
-		}
-
-		p.local {
-			font-size: 1.3em;
-			font-weight: 500;
-		}
-	}
-
-	.map {
-		width: 340px;
-		img {
-			width: 100%;
-		}
-	}
 }

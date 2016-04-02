@@ -8665,7 +8665,7 @@ body {
   display: none;
 }
 
-input[type=style] {
+input[type=text] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

@@ -4140,29 +4140,29 @@ fieldset[disabled] .btn-primary.focus {
 
 .btn-success {
   color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #00d300;
+  border-color: #00ba00;
 }
 
 .btn-success:focus,
 .btn-success.focus {
   color: #fff;
-  background-color: #449d44;
-  border-color: #255625;
+  background-color: #00a000;
+  border-color: #003a00;
 }
 
 .btn-success:hover {
   color: #fff;
-  background-color: #449d44;
-  border-color: #398439;
+  background-color: #00a000;
+  border-color: #007c00;
 }
 
 .btn-success:active,
 .btn-success.active,
 .open > .btn-success.dropdown-toggle {
   color: #fff;
-  background-color: #449d44;
-  border-color: #398439;
+  background-color: #00a000;
+  border-color: #007c00;
 }
 
 .btn-success:active:hover,
@@ -4175,8 +4175,8 @@ fieldset[disabled] .btn-primary.focus {
 .open > .btn-success.dropdown-toggle:focus,
 .open > .btn-success.dropdown-toggle.focus {
   color: #fff;
-  background-color: #398439;
-  border-color: #255625;
+  background-color: #007c00;
+  border-color: #003a00;
 }
 
 .btn-success:active,
@@ -4194,12 +4194,12 @@ fieldset[disabled] .btn-primary.focus {
 fieldset[disabled] .btn-success:hover,
 fieldset[disabled] .btn-success:focus,
 fieldset[disabled] .btn-success.focus {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #00d300;
+  border-color: #00ba00;
 }
 
 .btn-success .badge {
-  color: #5cb85c;
+  color: #00d300;
   background-color: #fff;
 }
 
@@ -6140,12 +6140,12 @@ a.label:focus {
 }
 
 .label-success {
-  background-color: #5cb85c;
+  background-color: #00d300;
 }
 
 .label-success[href]:hover,
 .label-success[href]:focus {
-  background-color: #449d44;
+  background-color: #00a000;
 }
 
 .label-info {
@@ -6463,7 +6463,7 @@ a.thumbnail.active {
 }
 
 .progress-bar-success {
-  background-color: #5cb85c;
+  background-color: #00d300;
 }
 
 .progress-striped .progress-bar-success {
@@ -8358,8 +8358,17 @@ button.close {
   color: #fff;
 }
 
+.btn {
+  border: none;
+}
+
 .app-screen label {
   font-weight: 400;
+}
+
+input.form-control {
+  border-radius: 4px;
+  box-shadow: 0 0 0 0 transparent;
 }
 
 .modal-title {
@@ -8478,7 +8487,7 @@ button.close {
 }
 
 .app-screen .app-tabs-stacked li a.v-link-active-exact i.fa {
-  color: #28cc75;
+  color: #00d300;
 }
 
 .app-screen .app-tabs-stacked li a:active,
@@ -8500,6 +8509,22 @@ html {
 body {
   font-weight: 400;
   margin-bottom: 80px;
+}
+
+.announcement {
+  color: #fff;
+  background-color: #288feb;
+  height: 4em;
+  text-align: center;
+}
+
+.announcement p {
+  font-size: 1.2em;
+  padding-top: 1em;
+}
+
+.announcement p a {
+  color: #fff;
 }
 
 .placeholder {

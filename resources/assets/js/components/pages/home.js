@@ -5,8 +5,7 @@ module.exports = {
     directives: {
         focusAuto: focusAuto
     },
-
-
+    
     data: function () {
         return {
             user: {

@@ -88,6 +88,12 @@ body {
     display: none;
 }
 
+input[type=style] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 .fa.fa-caret-right {
 	margin-left: .2em;
 	font-size: .9em;

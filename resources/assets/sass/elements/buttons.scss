@@ -12,6 +12,12 @@
 	}
 }
 
+.home {
+	.btn {
+		padding-top: 10px;
+		padding-bottom: 9px;
+	}
+}
 
 .btn-outline {
 	background-color: transparent;
@@ -20,11 +26,11 @@
 }
 
 .btn-primary.btn-outline {
-	color: #428bca;
+	color: $brand-primary;
 }
 
 .btn-success.btn-outline {
-	color: #5cb85c;
+	color: $brand-success;
 }
 
 .btn-info.btn-outline {

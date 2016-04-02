@@ -8324,6 +8324,11 @@ button.close {
   font-weight: 400;
 }
 
+.home .btn {
+  padding-top: 10px;
+  padding-bottom: 9px;
+}
+
 .btn-outline {
   background-color: transparent;
   color: inherit;
@@ -8331,11 +8336,11 @@ button.close {
 }
 
 .btn-primary.btn-outline {
-  color: #428bca;
+  color: #288feb;
 }
 
 .btn-success.btn-outline {
-  color: #5cb85c;
+  color: #00d300;
 }
 
 .btn-info.btn-outline {
@@ -8364,6 +8369,12 @@ button.close {
 
 .app-screen label {
   font-weight: 400;
+}
+
+.home input.form-control {
+  font-size: 1.1em;
+  padding-top: 19px !important;
+  padding-bottom: 18px !important;
 }
 
 input.form-control {
@@ -8410,6 +8421,20 @@ input.form-control {
   font-weight: 400;
   line-height: 25px;
   vertical-align: middle;
+}
+
+.navbar-nav > li > a {
+  margin-top: 13px;
+  padding-top: 10px !important;
+  padding-bottom: 0 !important;
+  height: 42px;
+}
+
+.navbar-brand {
+  min-width: 280px;
+  background: transparent url("/images/alternativet-500px.png") no-repeat;
+  background-size: 250px 56px;
+  background-position: 15px 11px;
 }
 
 .app-screen .tab-pane {
@@ -8541,20 +8566,6 @@ body {
 
 .placeholder p.additional {
   font-size: 1em;
-}
-
-.navbar-nav > li > a {
-  margin-top: 13px;
-  padding-top: 10px !important;
-  padding-bottom: 0 !important;
-  height: 42px;
-}
-
-.navbar-brand {
-  min-width: 280px;
-  background: transparent url("/images/alternativet-500px.png") no-repeat;
-  background-size: 250px 56px;
-  background-position: 15px 11px;
 }
 
 .footer {

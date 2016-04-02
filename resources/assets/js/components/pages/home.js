@@ -5,6 +5,8 @@ module.exports = {
     directives: {
         focusAuto: focusAuto
     },
+
+
     data: function () {
         return {
             user: {
@@ -12,7 +14,8 @@ module.exports = {
                 email: null,
                 mobile: null
             },
-            messages: []
+            messages: [],
+            config: window.config
         }
     },
 

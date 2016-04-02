@@ -50,3 +50,29 @@
 	background-size: 250px 56px;
 	background-position: 15px 11px;
 }
+
+.nav {
+	li  {
+
+		font-weight: 400;
+
+		a.auth {
+			color: $brand-primary;
+		}
+		a.auth:hover, a.auth:active {
+			color: #337ab7;
+		}
+
+		a.auth.outline {
+			border: 1px solid #3090e7;
+			border-radius: 4px;
+		}
+
+		a.auth.outline:hover, a.auth.outline:active {
+			color: #fff;
+			text-decoration: none;
+			background-color: $brand-primary;
+		}
+	}
+}
+

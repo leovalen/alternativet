@@ -1,6 +1,4 @@
-<div class="announcement">
-    <p><a v-link="{ path: '/erklaering' }">Alternativet samler 5 000 erklæringer for å stille til valg <i class="fa fa-caret-right"></i></a></p>
-</div>
+<announcement></announcement>
 <nav-component></nav-component>
 <div class="home container">
     <div class="col-md-6">
@@ -54,7 +52,7 @@
     </div>
     <div class="col-md-6">
         <div class="map">
-            <img src="{{ config.api.base_url }}/graphics/members-map-norway.svg" alt="Medlemmer i Norge" />
+            <img v-bind:src="map_src" alt="Medlemmer i Norge" />
         </div>
         <div class="cta">
             <h2>La oss farge kartet grønt</h2>

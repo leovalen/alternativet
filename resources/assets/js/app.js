@@ -1,5 +1,5 @@
 module.exports = {
-
+    
   ready: function () {
 
     this.$on('userHasLoggedOut', function () {

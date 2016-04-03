@@ -5,7 +5,7 @@ module.exports = {
     directives: {
         focusAuto: focusAuto
     },
-    
+
     data: function () {
         return {
             user: {
@@ -14,6 +14,7 @@ module.exports = {
                 mobile: null
             },
             messages: [],
+            map_src: config.api.base_url + '/graphics/members-map-norway.svg',
             config: window.config
         }
     },

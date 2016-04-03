@@ -57,9 +57,9 @@
         <div class="cta">
             <h2>La oss farge kartet grønt</h2>
             <ul>
-                <li>4 fylker</li>
-                <li>5 kommuner</li>
-                <li>43 deltakere</li>
+                <li>{{ statistics.counties }} fylker</li>
+                <li>{{ statistics.municipalities }} kommuner</li>
+                <li>{{ statistics.users }} deltakere</li>
             </ul>
             <p class="local">
                 <a v-link="{ path: '/manifest' }">Alternativet der du bor <i class="fa fa-caret-right"></i></a>

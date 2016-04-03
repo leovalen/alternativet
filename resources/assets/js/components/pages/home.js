@@ -15,8 +15,18 @@ module.exports = {
             },
             messages: [],
             map_src: config.api.base_url + '/graphics/members-map-norway.svg',
-            config: window.config
+            config: window.config,
+            statistics: Object
         }
+    },
+
+    ready: function() {
+
+        var that = this;
+
+        client({ path: '/statistics/users' }).then(function(response) {
+            that.$set('statistics', response.entity);
+        });
     },
 
     methods: {

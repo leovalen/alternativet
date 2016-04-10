@@ -40,6 +40,7 @@ module.exports = {
   methods: {
 
     setLogin: function (user) {
+
       // Save login info in our data and set header in case it's not set already
       this.user = user
       this.authenticated = true
@@ -47,6 +48,7 @@ module.exports = {
     },
 
     destroyLogin: function (user) {
+
       // Cleanup when token was invalid our user has logged out
       this.user = null
       this.token = null

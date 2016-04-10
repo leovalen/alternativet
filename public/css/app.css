@@ -8373,6 +8373,7 @@ button.close {
   border-top: 1px solid #e7e7e7;
   bottom: 0;
   height: 80px;
+  padding-bottom: 100px;
   position: absolute;
   width: 100%;
 }
@@ -8670,4 +8671,25 @@ input[type=text] {
 .fa.fa-caret-right {
   margin-left: .2em;
   font-size: .9em;
+}
+
+.main h2 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+.main header h2 {
+  margin-bottom: .5em;
+}
+
+.main p {
+  font-size: 1.3em;
+  margin-bottom: 1.4em;
+}
+
+.main p span.lead {
+  font-size: 1em;
+  font-weight: bold;
 }

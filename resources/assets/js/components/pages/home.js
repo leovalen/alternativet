@@ -42,8 +42,8 @@ module.exports = {
                     that.messages = []
                     if (response.status && response.status.code === 422) {
                         that.messages = []
-                        for (var key in response.entity) {
-                            that.messages.push({type: 'danger', message: response.entity[key]})
+                        for (var key in response.entity.errors) {
+                            that.messages.push({type: 'danger', message: response.entity.errors[key]})
                         }
                     }
                 }

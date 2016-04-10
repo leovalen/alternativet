@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 /*
- * Variables...
+ * Variables
  */
 
 /*
- * Bootstrap CSS...
+ * Includes
  */
 
 /*!
@@ -8414,10 +8414,6 @@ input.form-control {
   background-color: transparent;
   border-top: none;
   border-bottom: none;
-}
-
-.navbar .navbar-brand {
-  font-size: 28px;
 }
 
 .navbar .navbar-brand i {

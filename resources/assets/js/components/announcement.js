@@ -2,7 +2,9 @@ module.exports = {
 
     data: function () {
         return {
-            announcement: Object
+            announcement: {
+                message: ''
+            }
         }
     },
 
@@ -11,7 +13,10 @@ module.exports = {
         var that = this;
 
         client({ path: '/announcements/latest' }).then(function(response) {
-            that.$set('announcement', response.entity.data);
+            if (typeof response.entity == Object)
+            {
+                that.$set('announcement', response.entity.data);
+            }
         });
     }
 }

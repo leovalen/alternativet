@@ -1,4 +1,4 @@
-import { focusAuto } from 'vue-focus';
+import { focusAuto } from 'vue-focus'
 
 module.exports = {
 
@@ -55,7 +55,14 @@ module.exports = {
             client({ path: '/users/me' }).then(
                 function (response) {
                     that.$dispatch('userHasLoggedIn', response.entity.user)
-                    that.$route.router.go('/auth/profile')
+
+                    swal({
+                        title: "Velkommen!",
+                        text: "Vi anbefaler at du setter et passord for kontoen din og forteller litt om deg selv :)",
+                        type: "success",
+                    }, function() {
+                        that.$route.router.go('/auth/profile')
+                    })
                 }
             )
         }

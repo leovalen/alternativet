@@ -1,5 +1,5 @@
 /*
- * Variables...
+ * Variables
  */
  
 $border-radius-base: 0;
@@ -14,10 +14,11 @@ $font-size-base: 14px;
 $navbar-height: 65px;
 
 /*
- * Bootstrap CSS...
+ * Includes
  */
  
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "node_modules/sweetalert/src/sweetalert.scss";
 
 /**
  * Elements

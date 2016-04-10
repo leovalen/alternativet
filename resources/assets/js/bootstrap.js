@@ -2,7 +2,7 @@
 window.Vue = require('vue')
 window.VueRouter = require('vue-router')
 
-// Insert vue-router and vue-resource into Vue
+var swal = require('sweetalert')
 
 // Import the actual routes, aliases, ...
 import { configRouter } from './routes'

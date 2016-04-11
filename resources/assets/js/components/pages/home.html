@@ -44,7 +44,8 @@
             <div class="form-group">
                 <div class="col-md-11">
                     <button type="submit" class="btn btn-success btn-block">
-                        Opprett konto
+                        <span v-if="! submitting_registration">Opprett konto</span>
+                        <i v-if="submitting_registration" class="fa fa-spin fa-spinner"></i>
                     </button>
                 </div>
             </div>

@@ -16,7 +16,8 @@ module.exports = {
             messages: [],
             map_src: config.api.base_url + '/graphics/members-map-norway.svg',
             config: window.config,
-            statistics: Object
+            statistics: Object,
+            submitting_registration: false
         }
     },
 
@@ -34,16 +35,31 @@ module.exports = {
             e.preventDefault()
             var that = this
 
+            that.submitting_registration = true;
+
             client({ path: '/register', entity: this.user }).then(
                 function (response) {
+                    that.submitting_registration = false;
+
+                    swal({
+                        title: "Yay!",
+                        text: "Velkommen til Alternativet. Du er best!",
+                        type: "success",
+                    });
+
                     that.getUserData()
                 },
                 function (response, status) {
                     that.messages = []
                     if (response.status && response.status.code === 422) {
+
+                        that.submitting_registration = false;
+
+                        // swal({ title: "Oops", text: "Du må fylle ut navn, epost og mobilnr", type: "error" });
+
                         that.messages = []
                         for (var key in response.entity.errors) {
-                            that.messages.push({type: 'danger', message: response.entity.errors[key]})
+                            that.messages.push({type: 'info', message: response.entity.errors[key]})
                         }
                     }
                 }
@@ -55,14 +71,7 @@ module.exports = {
             client({ path: '/users/me' }).then(
                 function (response) {
                     that.$dispatch('userHasLoggedIn', response.entity.user)
-
-                    swal({
-                        title: "Velkommen!",
-                        text: "Vi anbefaler at du setter et passord for kontoen din og forteller litt om deg selv :)",
-                        type: "success",
-                    }, function() {
-                        that.$route.router.go('/auth/profile')
-                    })
+                    that.$route.router.go('/auth/profile')
                 }
             )
         }

@@ -8,7 +8,10 @@ var swal = require('sweetalert')
 import { configRouter } from './routes'
 
 // Create our router object and set options on it
-const router = new VueRouter()
+const router = new VueRouter({
+    history: true,
+    root: '/'
+})
 
 // Inject the routes into the VueRouter object
 configRouter(router)

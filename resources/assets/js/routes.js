@@ -36,6 +36,9 @@ module.exports = {
             },
         }
       },
+      '/betingelser': {
+          component: require('./compiled/pages/betingelser.vue')
+      },
       '/dogs': {
         component: require('./compiled/pages/dogs.vue'),
         auth: true,

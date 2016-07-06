@@ -44,7 +44,7 @@
             <div class="form-group">
                 <div class="col-md-11">
                     <button type="submit" class="btn btn-success btn-block">
-                        <span v-if="! submitting_registration">Opprett konto</span>
+                        <span v-if="! submitting_registration">Fortsett <i class="fa fa-caret-right"></i></span>
                         <i v-if="submitting_registration" class="fa fa-spin fa-spinner"></i>
                     </button>
                 </div>
@@ -52,8 +52,7 @@
         </form>
 
         <p class="policy">
-            Du blir ikke medlem av Alternativet bare ved å opprette konto,
-            og navnet ditt blir først synlig om du bidrar med noe. Ved å opprette konto aksepterer du
+            Ved å opprette konto godkjenner du
             <a v-link="{ path: '/betingelser' }">brukervilkårene</a>.
         </p>
 

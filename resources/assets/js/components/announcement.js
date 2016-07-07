@@ -13,9 +13,11 @@ module.exports = {
         var that = this;
 
         client({ path: '/announcements/latest' }).then(function(response) {
-            if (typeof response.entity == Object)
+
+            if (typeof response.entity.data === "object")
             {
                 that.$set('announcement', response.entity.data);
+                console.log(response.entity.data.message);
             }
         });
     }

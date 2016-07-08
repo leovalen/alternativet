@@ -10,7 +10,7 @@ $btn-border-radius-base: 4px;
 $btn-font-weight: 400;
 $base-font-weight: 400;
 $font-family-sans-serif: proxima-nova, Helvetica, Arial, sans-serif !default;
-$font-size-base: 14px;
+$font-size-base: 15px;
 $navbar-height: 65px;
 
 /*
@@ -120,4 +120,8 @@ input[type=text] {
 .main p span.lead {
 	font-size: 1em;
 	font-weight: bold;
+}
+
+p.document-link {
+	font-size: 1.5em;
 }

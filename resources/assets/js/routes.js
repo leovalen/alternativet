@@ -3,11 +3,15 @@ module.exports = {
   configRouter: function (router) {
 
     router.map({
-      '/auth': {
-        component: require('./compiled/pages/auth.vue'),
+      '/profil': {
+        component: require('./compiled/pages/profile.vue'),
         subRoutes: {
-          '/profile': {
-            component: require('./compiled/pages/auth/profile.vue'),
+          '/meg': {
+            component: require('./compiled/pages/profile/me.vue'),
+            auth: true
+          },
+          '/innstillinger': {
+            component: require('./compiled/pages/profile/settings.vue'),
             auth: true
           },
           '/logout': {
@@ -81,7 +85,7 @@ module.exports = {
         component: require('./compiled/pages/politikk.vue')
       },
       '/home': {
-        component: require('./compiled/pages/home.vue')
+        component: require('./compiled/pages/home/home.vue')
       },
       '*': {
         component: require('./compiled/pages/404.vue')
@@ -98,7 +102,7 @@ module.exports = {
       var token = localStorage.getItem('jwt-token')
       if (transition.to.auth) {
         if (!token || token === null) {
-          transition.redirect('/auth/login')
+          transition.redirect('/login')
         }
       }
       if (transition.to.guest) {

@@ -38,6 +38,7 @@ window.client = rest.wrap(pathPrefix, { prefix: config.api.base_url })
 // Bootstrap the app
 Vue.component('nav-component', require('./compiled/nav.vue'))
 Vue.component('footer-component', require('./compiled/footer.vue'))
+Vue.component('footer-full-component', require('./compiled/footer-full.vue'))
 Vue.component('announcement', require('./compiled/announcement.vue'))
 
 

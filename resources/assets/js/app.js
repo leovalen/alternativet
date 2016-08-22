@@ -54,7 +54,7 @@ module.exports = {
       this.token = null
       this.authenticated = false
       localStorage.removeItem('jwt-token')
-      if (this.$route.auth) this.$route.router.go('/auth/login')
+      if (this.$route.auth) this.$route.router.go('/login')
     }
   }
 

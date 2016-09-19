@@ -12,7 +12,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label">E-post</label>
                 <div class="col-md-6">
-                    <input type="email" class="form-control" v-model="user.email">
+                    <input v-focus-auto type="email" class="form-control" v-model="user.email">
                 </div>
             </div>
 
@@ -25,13 +25,16 @@
 
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
+                    <p>
+                        <i><small>Hvis du ikke har satt eget passord, skriver du mobilnummeret ditt i stedet.</small></i>
+                    </p>
                     <button type="submit" class="btn btn-primary" v-on:click="attempt">
                         <i class="fa fa-btn fa-sign-in"></i>Logg inn
                     </button>
-                    <a class="btn btn-default" v-link="{ path: '/register' }">
+                    <a class="btn btn-default" v-link="{ path: '/' }">
                         Opprett bruker
                     </a>
-                    <a class="btn btn-link" v-link="{ path: '/auth/forgot' }">Glemt passordet?</a>
+                    <!--<a class="btn btn-link" v-link="{ path: '/passord' }">Glemt passordet?</a>-->
                 </div>
             </div>
         </form>

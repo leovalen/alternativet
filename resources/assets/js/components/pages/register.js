@@ -38,7 +38,7 @@ module.exports = {
 
     getUserData: function () {
       var that = this
-      client({ path: '/users/me' }).then(
+      client({ path: '/profil/meg' }).then(
         function (response) {
           that.$dispatch('userHasLoggedIn', response.entity.user)
           that.$route.router.go('/profil/meg')

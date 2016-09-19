@@ -15,7 +15,7 @@ module.exports = {
             auth: true
           },
           '/logout': {
-            component: require('./compiled/pages/auth/logout.vue'),
+            component: require('./compiled/pages/profile/logout.vue'),
             auth: true
           }
         }

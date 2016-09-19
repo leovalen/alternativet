@@ -32,9 +32,6 @@ module.exports = {
           '/kontakt': {
             component: require('./compiled/pages/om/kontakt.vue')
           },
-          '/folk': {
-            component: require('./compiled/pages/om/folk.vue')
-          },
             '/organisasjon': {
                 component: require('./compiled/pages/om/organisasjon.vue')
             },

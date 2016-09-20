@@ -11,7 +11,7 @@ module.exports = {
             user: {
                 name: null,
                 email: null,
-                mobile: null
+                phone: null
             },
             messages: [],
             map_src: config.api.base_url + '/graphics/members-map-norway.svg',

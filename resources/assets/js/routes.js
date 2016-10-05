@@ -64,7 +64,10 @@ module.exports = {
             guest: true
         },
       '/manifest': {
-        component: require('./compiled/pages/manifest.vue')
+        component: require('./compiled/pages/plattform.vue')
+      },
+      '/plattform': {
+        component: require('./compiled/pages/plattform.vue')
       },
       '/terms': {
         component: require('./compiled/pages/terms.vue')

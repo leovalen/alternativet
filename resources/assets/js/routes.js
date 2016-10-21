@@ -3,15 +3,19 @@ module.exports = {
   configRouter: function (router) {
 
     router.map({
-      '/auth': {
-        component: require('./compiled/pages/auth.vue'),
+      '/profil': {
+        component: require('./compiled/pages/profile.vue'),
         subRoutes: {
-          '/profile': {
-            component: require('./compiled/pages/auth/profile.vue'),
+          '/meg': {
+            component: require('./compiled/pages/profile/me.vue'),
+            auth: true
+          },
+          '/innstillinger': {
+            component: require('./compiled/pages/profile/settings.vue'),
             auth: true
           },
           '/logout': {
-            component: require('./compiled/pages/auth/logout.vue'),
+            component: require('./compiled/pages/profile/logout.vue'),
             auth: true
           }
         }
@@ -28,13 +32,13 @@ module.exports = {
           '/kontakt': {
             component: require('./compiled/pages/om/kontakt.vue')
           },
-          '/folk': {
-            component: require('./compiled/pages/om/folk.vue')
-          },
             '/organisasjon': {
                 component: require('./compiled/pages/om/organisasjon.vue')
             },
         }
+      },
+      '/betingelser': {
+          component: require('./compiled/pages/betingelser.vue')
       },
       '/dogs': {
         component: require('./compiled/pages/dogs.vue'),
@@ -60,7 +64,10 @@ module.exports = {
             guest: true
         },
       '/manifest': {
-        component: require('./compiled/pages/manifest.vue')
+        component: require('./compiled/pages/plattform.vue')
+      },
+      '/plattform': {
+        component: require('./compiled/pages/plattform.vue')
       },
       '/terms': {
         component: require('./compiled/pages/terms.vue')
@@ -71,13 +78,22 @@ module.exports = {
       '/sporsmal': {
         component: require('./compiled/pages/sporsmal.vue')
       },
+      '/erklaering': {
+        component: require('./compiled/pages/erklaering.vue')
+      },
+      '/politikk': {
+        component: require('./compiled/pages/politikk.vue')
+      },
+      '/home': {
+        component: require('./compiled/pages/home/home.vue')
+      },
       '*': {
         component: require('./compiled/pages/404.vue')
       }
     })
 
     router.alias({
-      '': '/om',
+      '': '/home',
       '/auth': '/login'
     })
 
@@ -86,7 +102,7 @@ module.exports = {
       var token = localStorage.getItem('jwt-token')
       if (transition.to.auth) {
         if (!token || token === null) {
-          transition.redirect('/auth/login')
+          transition.redirect('/login')
         }
       }
       if (transition.to.guest) {

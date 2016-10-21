@@ -1,34 +1,38 @@
 /*
- * Variables...
+ * Variables
  */
  
 $border-radius-base: 0;
 $brand-primary: #288feb;
-$active-icon-color: #28cc75;
+$brand-success: #00d300;
+$active-icon-color: #00d300;
 $btn-border-radius-base: 4px;
 $btn-font-weight: 400;
 $base-font-weight: 400;
 $font-family-sans-serif: proxima-nova, Helvetica, Arial, sans-serif !default;
-$font-size-base: 14px;
+$font-size-base: 15px;
 $navbar-height: 65px;
 
 /*
- * Bootstrap CSS...
+ * Includes
  */
  
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "node_modules/sweetalert/src/sweetalert.scss";
 
 /**
  * Elements
  */
 
 @import "elements/buttons";
+@import "elements/footer";
 @import "elements/forms";
 @import "elements/modals";
 @import "elements/nav";
 @import "elements/panels";
 @import "elements/tables";
 @import "elements/tooltips";
+@import "pages/home";
 
 /**
  * Components
@@ -50,6 +54,21 @@ body {
 	margin-bottom: 80px;
 }
 
+.announcement {
+	color: #fff;
+	background-color: #288feb;
+	height: 4em;
+	text-align: center;
+
+	p {
+		font-size: 1.2em;
+		padding-top: 1em;
+		a {
+			color: #fff;
+		}
+	}
+}
+
 .placeholder {
 	display: block;
 	margin-top: 8%;
@@ -66,36 +85,43 @@ body {
 	}
 }
 
-.navbar-brand {
-    min-width: 280px;
-	background: transparent url('/images/alternativet-500px.png') no-repeat;
-	background-size: 250px 56px;
-    background-position: 15px 11px;
-}
-
-.footer {
-	background-color: #f5f5f5;
-	border-top: 1px solid #e7e7e7;
-	bottom: 0;
-	height: 80px;
-	position: absolute;
-	width: 100%;
-
-	.footer-social-icons {
-		font-size: 32px;
-		padding-top: 18px;
-
-		a {
-			color: #777;
-		}
-	}
-}
-
 [v-cloak] {
     display: none;
+}
+
+input[type=text] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .fa.fa-caret-right {
 	margin-left: .2em;
 	font-size: .9em;
+}
+
+
+.main h2 {
+	margin-top: 0;
+	margin-bottom: 1em;
+	font-weight: bold;
+	font-size: 2.4em;
+}
+
+.main header h2 {
+	margin-bottom: .5em;
+}
+
+.main p {
+	font-size: 1.3em;
+	margin-bottom: 1.4em;
+}
+
+.main p span.lead {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+p.document-link {
+	font-size: 1.5em;
 }

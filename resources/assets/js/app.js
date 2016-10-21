@@ -1,5 +1,5 @@
 module.exports = {
-
+    
   ready: function () {
 
     this.$on('userHasLoggedOut', function () {
@@ -14,7 +14,7 @@ module.exports = {
     var token = localStorage.getItem('jwt-token')
     if (token !== null && token !== 'undefined') {
       var that = this
-      client({ path: '/users/me' }).then(
+      client({ path: '/profil/meg' }).then(
         function (response) {
           // User has successfully logged in using the token from storage
           that.setLogin(response.entity.user)
@@ -40,6 +40,7 @@ module.exports = {
   methods: {
 
     setLogin: function (user) {
+
       // Save login info in our data and set header in case it's not set already
       this.user = user
       this.authenticated = true
@@ -47,12 +48,13 @@ module.exports = {
     },
 
     destroyLogin: function (user) {
+
       // Cleanup when token was invalid our user has logged out
       this.user = null
       this.token = null
       this.authenticated = false
       localStorage.removeItem('jwt-token')
-      if (this.$route.auth) this.$route.router.go('/auth/login')
+      if (this.$route.auth) this.$route.router.go('/login')
     }
   }
 

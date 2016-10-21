@@ -1,4 +1,10 @@
+import { focusAuto } from 'vue-focus'
+
 module.exports = {
+
+  directives: {
+    focusAuto: focusAuto
+  },
 
   data: function () {
     return {
@@ -21,7 +27,9 @@ module.exports = {
         },
         function (response) {
           that.messages = []
-          if (response.status && response.status.code === 401) that.messages.push({type: 'danger', message: 'Beklager, brukernavn eller passord er feil.'})
+          if (response.status && response.status.code === 401) {
+            that.messages.push({type: 'danger', message: 'Beklager, brukernavn eller passord er feil.'})
+          }
         }
       )
     },
@@ -31,7 +39,7 @@ module.exports = {
       client({ path: '/users/me' }).then(
         function (response) {
           that.$dispatch('userHasLoggedIn', response.entity.user)
-          that.$route.router.go('/auth/profile')
+          that.$route.router.go('/profil/meg')
         },
         function (response) {
           console.log(response)

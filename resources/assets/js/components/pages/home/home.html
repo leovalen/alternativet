@@ -1,0 +1,82 @@
+<announcement></announcement>
+<nav-component></nav-component>
+<div class="home container">
+    <div class="col-md-6">
+        <div class="main">
+            <header>
+                <h1 class="lead">
+                    <strong>Ny politisk kultur</strong><br />
+                    fordi det trengs nye tanker.
+                </h1>
+            </header>
+            <p>
+                Bli med i samtalen for å skape et<br />
+                alternativ til det etablerte.
+            </p>
+        </div>
+
+        <form class="form-horizontal" role="form" autocomplete="off" v-on:submit="registerUser">
+
+            <!-- Safari hack to disable buggy autocomplete -->
+            <input type="password" name="dummypass" value="dummypass" style="display: inline; width: 0; height: 0; border: 0;" />
+
+            <div id="alerts" v-if="messages.length > 0">
+                <div v-for="message in messages" class="alert alert-{{ message.type }} alert-dismissible" role="alert">
+                    {{ message.message }}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-11">
+                    <input autocomplete="off" v-focus-auto placeholder="Navn" type="text" class="form-control" v-model="user.name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-11">
+                    <input autocomplete="off" placeholder="E-postadresse" type="text" class="form-control" v-model="user.email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-11">
+                    <input autocomplete="off" placeholder="Mobilnummer" type="text" class="form-control" v-model="user.phone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-11">
+                    <button type="submit" class="btn btn-success btn-block">
+                        <span v-if="! submitting_registration">Fortsett <i class="fa fa-caret-right"></i></span>
+                        <i v-if="submitting_registration" class="fa fa-spin fa-spinner"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <p class="policy">
+            Ved å opprette konto godkjenner du
+            <a v-link="{ path: '/betingelser' }">brukervilkårene</a>.
+        </p>
+
+    </div>
+    <div class="col-md-6">
+        <div class="map">
+            <img v-bind:src="map_src" alt="Medlemmer i Norge" />
+        </div>
+        <div class="cta">
+            <h2>La oss farge kartet grønt</h2>
+            <ul>
+                <li>{{ statistics.counties }} fylker</li>
+                <li>{{ statistics.municipalities }} kommuner</li>
+                <li v-if="statistics.users > 100">{{ statistics.users }} deltakere</li>
+            </ul>
+            <!--
+            <p class="local">
+                <a v-link="{ path: '/manifest' }">Alternativet der du bor <i class="fa fa-caret-right"></i></a>
+            </p>
+            -->
+        </div>
+    </div>
+</div>
+<footer-full-component></footer-full-component>

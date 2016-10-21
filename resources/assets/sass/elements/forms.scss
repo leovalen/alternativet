@@ -3,3 +3,18 @@
     	font-weight: 400;
     }
 }
+
+.home {
+	input.form-control {
+		font-size: 1.1em;
+		padding-top: 19px !important;
+		padding-bottom: 18px !important;
+	}
+}
+
+input.form-control {
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 0 0 transparent;
+	-moz-box-shadow: 0 0 0 0 transparent;
+	box-shadow: 0 0 0 0 transparent;
+}

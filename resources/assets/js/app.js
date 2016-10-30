@@ -14,7 +14,7 @@ module.exports = {
     var token = localStorage.getItem('jwt-token')
     if (token !== null && token !== 'undefined') {
       var that = this
-      client({ path: '/profil/meg' }).then(
+      client({ path: '/users/me' }).then(
         function (response) {
           // User has successfully logged in using the token from storage
           that.setLogin(response.entity.user)

@@ -4,6 +4,8 @@ process.env.DISABLE_NOTIFIER = true
 // I need some magic
 var elixir = require('laravel-elixir')
 require('elixir-vuemaker')
+require('laravel-elixir-vueify');
+require('laravel-elixir-browserify-official')
 
 elixir.config.js.browserify.transformers.push({ name: 'envify' })
 

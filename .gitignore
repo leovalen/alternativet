@@ -1,4 +1,7 @@
 .env
 .DS_Store
+/node_modules
 /.idea
 /*.log
+/public/css
+/public/js

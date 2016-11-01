@@ -17,7 +17,7 @@ module.exports = {
       client({ path: '/users/me' }).then(
         function (response) {
           // User has successfully logged in using the token from storage
-          that.setLogin(response.entity.user)
+          that.setLogin(response.entity.data)
           // broadcast an event telling our children that the data is ready and views can be rendered
           that.$broadcast('data-loaded')
         },
@@ -47,7 +47,7 @@ module.exports = {
       this.token = localStorage.getItem('jwt-token')
     },
 
-    destroyLogin: function (user) {
+    destroyLogin: function () {
 
       // Cleanup when token was invalid our user has logged out
       this.user = null

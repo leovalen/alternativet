@@ -70,7 +70,7 @@ module.exports = {
             var that = this
             client({ path: '/users/me' }).then(
                 function (response) {
-                    that.$dispatch('userHasLoggedIn', response.entity.user)
+                    that.$dispatch('userHasLoggedIn', response.entity.data)
                     that.$route.router.go('/profil/meg')
                 }
             )

@@ -4,6 +4,17 @@ window.VueRouter = require('vue-router')
 
 var swal = require('sweetalert')
 
+var moment = require('moment')
+require('moment/locale/en-gb'); // locales all in lower-case
+
+exports.install = function (Vue, options) {
+    Vue.prototype.moment = function (date, format) {
+        return moment(date).format('DD.MM.YYYY');
+    };
+}
+
+Vue.use(exports);
+
 // Import the actual routes, aliases, ...
 import { configRouter } from './routes'
 

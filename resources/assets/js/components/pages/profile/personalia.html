@@ -1,9 +1,7 @@
 <div v-if="$root.user">
     <h2>Mine opplysninger</h2>
     <p class="lead">
-        Dette er kontaktopplysningene vi har registrert om deg.<br />
-        Ta kontakt med <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> for å endre
-        opplysninger.
+        Ta kontakt med <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> for å endre opplysninger.
     </p>
     <table class="table">
         <tr>
@@ -31,4 +29,45 @@
             <td>{{ $root.user.birth_date }}</td>
         </tr>
     </table>
+
+    <div>
+        <h3>Medlemskap</h3>
+        <div v-if="! $root.user.membership">
+            <p class="lead">
+                Du står ikke som medlem av Alternativet.<br />
+                Som medlem får du mulighet til å delta i avstemninger om Alternativets politikk. Medlemskap er gratis, og det er frivillig å betale kontingent.
+            </p>
+            <p>
+                Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> hvis du ønsker å melde deg inn.
+            </p>
+        </div>
+
+        <div v-if="$root.user.membership">
+            <p>
+                Du står som medlem av Alternativet, innmeldt {{ moment($root.user.membership.data.valid_from.date) }}.<br />
+                Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> dersom du ønsker å melde deg ut.
+            </p>
+        </div>
+    </div>
+
+    <div v-if="$root.user.appointments">
+        <h3>Verv</h3>
+        <table class="table">
+            <tr>
+                <th>Verv</th>
+                <th>Organ</th>
+                <th>Organisasjon</th>
+                <th>Valgt dato</th>
+                <th>Utløper dato</th>
+            </tr>
+            <tr v-for="appointment in $root.user.appointments.data" v-if="appointment.is_active">
+                <td>{{ appointment.name }}</td>
+                <td>{{ appointment.forum }}</td>
+                <td>{{ appointment.organisation }}</td>
+                <td>{{ moment(appointment.elected_at.date) }}</td>
+                <td>{{ moment(appointment.active_to.date) }}</td>
+            </tr>
+        </table>
+
+    </div>
 </div>

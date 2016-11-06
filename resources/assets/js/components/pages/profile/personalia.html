@@ -33,9 +33,12 @@
     <div>
         <h3>Medlemskap</h3>
         <div v-if="! $root.user.membership">
-            <p class="lead">
-                Du står ikke som medlem av Alternativet.<br />
-                Som medlem får du mulighet til å delta i avstemninger om Alternativets politikk. Medlemskap er gratis, og det er frivillig å betale kontingent.
+
+            <div class="alert alert-info">
+                <i class="fa fa-fw fa-times"></i> Du står ikke som medlem.
+            </div>
+            <p>
+                Som medlem får du mulighet til å delta i avstemninger om Alternativets politikk. Medlemskap er gratis. Alternativet har ingen begrensninger for medlemskap i andre partier og politiske organisasjoner.
             </p>
             <p>
                 Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> hvis du ønsker å melde deg inn.
@@ -43,8 +46,10 @@
         </div>
 
         <div v-if="$root.user.membership">
+            <div class="alert alert-success">
+                <i class="fa fa-fw fa-check"></i> Du står som medlem av Alternativet, innmeldt {{ moment($root.user.membership.data.valid_from.date) }}.
+            </div>
             <p>
-                Du står som medlem av Alternativet, innmeldt {{ moment($root.user.membership.data.valid_from.date) }}.<br />
                 Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> dersom du ønsker å melde deg ut.
             </p>
         </div>

@@ -10,8 +10,8 @@ module.exports = {
             component: require('./compiled/pages/profile/me.vue'),
             auth: true
           },
-          '/innstillinger': {
-            component: require('./compiled/pages/profile/settings.vue'),
+          '/personalia': {
+            component: require('./compiled/pages/profile/personalia.vue'),
             auth: true
           },
           '/logout': {

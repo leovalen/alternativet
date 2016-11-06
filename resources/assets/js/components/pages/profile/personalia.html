@@ -1,0 +1,34 @@
+<div v-if="$root.user">
+    <h2>Mine opplysninger</h2>
+    <p class="lead">
+        Dette er kontaktopplysningene vi har registrert om deg.<br />
+        Ta kontakt med <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> for å endre
+        opplysninger.
+    </p>
+    <table class="table">
+        <tr>
+            <th>Navn</th>
+            <td>{{ $root.user.name }}</td>
+        </tr>
+        <tr>
+            <th>Mobilnummer</th>
+            <td><span v-if="$root.user.phone_country_code && $root.user.phone_country_code != 47">({{ $root.user.phone_country_code }})</span> {{ $root.user.phone }}</td>
+        </tr>
+        <tr>
+            <th>E-postadresse</th>
+            <td>{{ $root.user.email }}</td>
+        </tr>
+        <tr v-if="$root.user.address">
+            <th>Postadresse</th>
+            <td>{{ $root.user.address }}</td>
+        </tr>
+        <tr v-if="$root.user.postal_code">
+            <th>Postnummer</th>
+            <td>{{ $root.user.postal_code }}</td>
+        </tr>
+        <tr v-if="$root.user.birth_date">
+            <th>Fødselsdato</th>
+            <td>{{ $root.user.birth_date }}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,32 @@
+<div v-if="$root.user">
+    <h2>Passord</h2>
+    <p class="lead">
+        Passordet må være på minst åtte tegn.<br />Vi anbefaler å bruke en hel setning som passord.
+    </p>
+
+    <div id="alerts" v-if="messages.length > 0">
+        <div v-for="message in messages" class="alert alert-{{ message.type }} alert-dismissible" role="alert">
+            {{ message.message }}
+        </div>
+    </div>
+    <form class="form-horizontal" role="form" v-on:submit="updatePassword">
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Nytt passord</label>
+            <div class="col-sm-5">
+                <input class="form-control" required="required" name="password" type="password" v-model="password.password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirm_password" class="col-sm-3 control-label">Bekreft nytt passord</label>
+            <div class="col-sm-5">
+                <input class="form-control" required="required" name="confirm_password" type="password" v-model="password.confirm_password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-4 col-sm-offset-3">
+                <button type="submit" class="btn btn-primary">Sett nytt passord</button>
+            </div>
+        </div>
+    </form>
+
+</div>

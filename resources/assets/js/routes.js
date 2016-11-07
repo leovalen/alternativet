@@ -14,6 +14,10 @@ module.exports = {
             component: require('./compiled/pages/profile/personalia.vue'),
             auth: true
           },
+          '/sikkerhet': {
+            component: require('./compiled/pages/profile/security.vue'),
+            auth: true
+          },
           '/logout': {
             component: require('./compiled/pages/profile/logout.vue'),
             auth: true

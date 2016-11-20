@@ -10,12 +10,12 @@ module.exports = {
             component: require('./compiled/pages/profile/me.vue'),
             auth: true
           },
-          '/personalia': {
-            component: require('./compiled/pages/profile/personalia.vue'),
-            auth: true
-          },
           '/sikkerhet': {
             component: require('./compiled/pages/profile/security.vue'),
+            auth: true
+          },
+          '/personalia': {
+            component: require('./compiled/pages/profile/personalia.vue'),
             auth: true
           },
           '/logout': {
@@ -63,10 +63,13 @@ module.exports = {
         component: require('./compiled/pages/login.vue'),
         guest: true
       },
-        '/register': {
-            component: require('./compiled/pages/register.vue'),
-            guest: true
-        },
+      '/register': {
+        component: require('./compiled/pages/register.vue'),
+        guest: true
+      },
+      '/nytt-passord/:token': {
+        component: require('./compiled/pages/reset-password.vue')
+      },
       '/manifest': {
         component: require('./compiled/pages/plattform.vue')
       },

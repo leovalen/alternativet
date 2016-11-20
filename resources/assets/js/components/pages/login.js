@@ -34,6 +34,27 @@ module.exports = {
       )
     },
 
+    resetPassword: function (e) {
+      e.preventDefault()
+      var that = this
+      client({ path: 'send-reset-password-token', entity: this.user }).then(
+          function (response) {
+            that.messages = []
+            swal({
+              title: "Sjekk e-posten din",
+              text: "Du vil straks motta en e-post med lenke til å sette nytt passord.",
+              type: "success",
+            });
+          },
+          function (response) {
+            that.messages = []
+            if (response.status && response.status.code === 422) {
+              that.messages.push({type: 'warning', message: 'Du må skrive e-postadressen din.'})
+            }
+          }
+      )
+    },
+
     getUserData: function () {
       var that = this
       client({ path: '/users/me' }).then(

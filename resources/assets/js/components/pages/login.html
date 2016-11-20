@@ -25,12 +25,12 @@
 
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
-                    <p>
-                        <i><small>Hvis du ikke har satt eget passord, skriver du mobilnummeret ditt i stedet.</small></i>
-                    </p>
                     <button type="submit" class="btn btn-primary" v-on:click="attempt">
                         <i class="fa fa-btn fa-sign-in"></i>Logg inn
                     </button>
+                    <a class="btn btn-default" v-on:click="resetPassword">
+                        Glemt passord
+                    </a>
                     <a class="btn btn-default" v-link="{ path: '/' }">
                         Opprett bruker
                     </a>

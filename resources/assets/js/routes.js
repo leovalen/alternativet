@@ -79,9 +79,6 @@ module.exports = {
       '/terms': {
         component: require('./compiled/pages/terms.vue')
       },
-      '/placeholder': {
-        component: require('./compiled/pages/placeholder.vue')
-      },
       '/sporsmal': {
         component: require('./compiled/pages/sporsmal.vue')
       },

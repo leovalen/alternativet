@@ -1,10 +1,80 @@
 <div v-if="$root.user">
 	<h2>Velkommen, {{ $root.user.name }}!</h2>
-	<div class="alert alert-success">
-		<strong>Vil du betateste medlemsplattformen vår?</strong> Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> for å få tilgang.
-	</div>
-	<p>
-		Inntil videre foregår det meste i <a href="https://www.facebook.com/groups/528114394010043/">Facebook-gruppa vår.</a>
+	<p class="lead">
+		Ta kontakt med <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> for å endre opplysninger.
 	</p>
-	<p>Du får e-post fra oss når det skjer noe viktig.</p>
+    <div>
+        <h3>Profil</h3>
+    </div>
+	<table class="table">
+		<tr>
+			<th>Navn</th>
+			<td>{{ $root.user.name }}</td>
+		</tr>
+		<tr>
+			<th>Mobilnummer</th>
+			<td><span v-if="$root.user.phone_country_code && $root.user.phone_country_code != 47">({{ $root.user.phone_country_code }})</span> {{ $root.user.phone }}</td>
+		</tr>
+		<tr>
+			<th>E-postadresse</th>
+			<td>{{ $root.user.email }}</td>
+		</tr>
+		<tr v-if="$root.user.address">
+			<th>Postadresse</th>
+			<td>{{ $root.user.address }}</td>
+		</tr>
+		<tr v-if="$root.user.postal_code">
+			<th>Postnummer</th>
+			<td>{{ $root.user.postal_code }}</td>
+		</tr>
+		<tr v-if="$root.user.birth_date">
+			<th>Fødselsdato</th>
+			<td>{{ $root.user.birth_date }}</td>
+		</tr>
+	</table>
+
+	<div>
+		<h3>Medlemskap</h3>
+		<div v-if="! $root.user.membership">
+
+			<div class="alert alert-info">
+				<i class="fa fa-fw fa-times"></i> Du står ikke som medlem.
+			</div>
+			<p>
+				Som medlem får du mulighet til å delta i avstemninger om Alternativets politikk. Medlemskap er gratis. Alternativet har ingen begrensninger for medlemskap i andre partier og politiske organisasjoner.
+			</p>
+			<p>
+				Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> hvis du ønsker å melde deg inn.
+			</p>
+		</div>
+
+		<div v-if="$root.user.membership">
+			<div class="alert alert-success">
+				<i class="fa fa-fw fa-check"></i> Du står som medlem av Alternativet, innmeldt {{ moment($root.user.membership.data.valid_from.date) }}.
+			</div>
+			<p>
+				Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> dersom du ønsker å melde deg ut.
+			</p>
+		</div>
+	</div>
+
+	<div v-if="$root.user.appointments">
+		<h3>Verv</h3>
+		<table class="table">
+			<tr>
+				<th>Verv</th>
+				<th>Organ</th>
+				<th>Organisasjon</th>
+				<th>Valgt dato</th>
+				<th>Utløper dato</th>
+			</tr>
+			<tr v-for="appointment in $root.user.appointments.data" v-if="appointment.is_active">
+				<td>{{ appointment.name }}</td>
+				<td>{{ appointment.forum }}</td>
+				<td>{{ appointment.organisation }}</td>
+				<td>{{ moment(appointment.elected_at.date) }}</td>
+				<td>{{ moment(appointment.active_to.date) }}</td>
+			</tr>
+		</table>
+	</div>
 </div>

@@ -38,7 +38,7 @@
 		<div v-if="! $root.user.membership">
 
 			<div class="alert alert-info">
-				<i class="fa fa-fw fa-times"></i> Du står ikke som medlem.
+				<i class="fa fa-fw fa-times"></i> Du er ikke medlem.
 			</div>
 			<p>
 				Som medlem får du mulighet til å delta i avstemninger om Alternativets politikk. Medlemskap er gratis. Alternativet har ingen begrensninger for medlemskap i andre partier og politiske organisasjoner.
@@ -50,7 +50,7 @@
 
 		<div v-if="$root.user.membership">
 			<div class="alert alert-success">
-				<i class="fa fa-fw fa-check"></i> Du står som medlem av Alternativet, innmeldt {{ moment($root.user.membership.data.valid_from.date) }}.
+				<i class="fa fa-fw fa-check"></i> Du er medlem, innmeldt {{ moment($root.user.membership.data.valid_from.date) }}.
 			</div>
 			<p>
 				Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> dersom du ønsker å melde deg ut.

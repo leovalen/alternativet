@@ -33,19 +33,21 @@
 		</tr>
 	</table>
 
-	<div>
+	<div class="membership">
 		<h3>Medlemskap</h3>
 		<div v-if="! $root.user.membership">
 
 			<div class="alert alert-info">
 				<i class="fa fa-fw fa-times"></i> Du er ikke medlem.
 			</div>
+
+			<p>
+				<button v-on:click="activateMembership()" type="button" class="btn btn-success">Jeg vil melde meg inn <i class="fa fa-caret-right"></i></button>
+			</p>
+
 			<p>
 				Som medlem får du mulighet til å delta i avstemninger om Alternativets politikk. Medlemskap er gratis.<br />
 				Alternativet har ingen begrensninger for medlemskap i andre partier og politiske organisasjoner.
-			</p>
-			<p>
-				Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> hvis du ønsker å melde deg inn.
 			</p>
 		</div>
 
@@ -54,7 +56,7 @@
 				<i class="fa fa-fw fa-check"></i> Du er medlem, innmeldt {{ moment($root.user.membership.data.valid_from.date) }}.
 			</div>
 			<p>
-				Send en e-post til <a href="mailto:medlem@alternativet.party">medlem@alternativet.party</a> dersom du ønsker å melde deg ut.
+				<button v-on:click="deactivateMembership()" type="button" class="btn btn-info">Meld meg ut av Alternativet <i class="fa fa-caret-right"></i></button>
 			</p>
 		</div>
 

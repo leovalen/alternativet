@@ -35,6 +35,10 @@
 
 	<div class="membership">
 		<h3>Medlemskap</h3>
+		<div class="alert alert-info">
+			<p><i class="fa fa-fw fa-info"></i> Medlemskap i Alternativet er offentlig. Andre medlemmer vil kunne se at du er medlem. Dersom du er aktiv i Alternativet ved å delta i diskusjoner og avstemninger, eller gjennom andre aktive handlinger, vil også utenforstående kunne se at du er medlem.</p>
+		</div>
+
 		<div v-if="! $root.user.membership">
 
 			<div class="alert alert-info">
@@ -58,10 +62,6 @@
 			<p>
 				<button v-on:click="deactivateMembership()" type="button" class="btn btn-info">Meld meg ut av Alternativet <i class="fa fa-caret-right"></i></button>
 			</p>
-		</div>
-
-		<div>
-			<p>Medlemskap i Alternativet er offentlig. Andre medlemmer vil kunne se at du er medlem. Dersom du er aktiv i Alternativet ved å delta i diskusjoner og avstemninger, eller gjennom andre aktive handlinger, vil også utenforstående kunne se at du er medlem.</p>
 		</div>
 	</div>
 

@@ -88,6 +88,9 @@ module.exports = {
       '/politikk': {
         component: require('./compiled/pages/politikk.vue')
       },
+        '/nominasjon': {
+            component: require('./compiled/pages/nominasjon.vue')
+        },
       '/home': {
         component: require('./compiled/pages/home/home.vue')
       },

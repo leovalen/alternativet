@@ -3,13 +3,16 @@
   background-color: #252525;
   border-top: 1px solid #e7e7e7;
   bottom: 0;
-  height: 120px;
-  padding-bottom: 120px;
-  position: absolute;
+  height: 180px;
   width: 100%;
   line-height: 1.2em;
 
-  p.terms {
+  abbr[title] {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  p.terms, p.org {
     margin-top: 0;
     font-size: .8em;
     line-height: 1.3em;

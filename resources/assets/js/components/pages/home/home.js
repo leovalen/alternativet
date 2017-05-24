@@ -40,14 +40,15 @@ module.exports = {
             client({ path: '/register', entity: this.user }).then(
                 function (response) {
                     that.submitting_registration = false;
+                    /*
+                     swal({
+                     title: "Yay!",
+                     text: "Velkommen til Alternativet. Du er best!",
+                     type: "success",
+                     });
+                     */
 
-                    swal({
-                        title: "Yay!",
-                        text: "Velkommen til Alternativet. Du er best!",
-                        type: "success",
-                    });
-
-                    that.getUserData()
+                    that.redirectToTypeform()
                 },
                 function (response, status) {
                     that.messages = []
@@ -72,6 +73,19 @@ module.exports = {
                 function (response) {
                     that.$dispatch('userHasLoggedIn', response.entity.data)
                     that.$route.router.go('/profil/meg')
+                }
+            )
+        },
+
+        redirectToTypeform: function() {
+            var that = this
+            client({ path: '/users/me' }).then(
+                function (response) {
+                    var user = response.entity.data;
+
+                    that.$dispatch('userHasLoggedIn', user)
+
+                    location.href = "https://alternativet.typeform.com/to/R0wZBU?name=" + user.name + "&token=" + user.uuid;
                 }
             )
         }

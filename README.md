@@ -1,9 +1,8 @@
 # www.alternativet.party
-Front end for the Alternativet web site and member services.
+The web site of The Alternative in Norway (alternativet.party).
 
-This project is based on the [Vue starter](https://github.com/layer7be/vue-starter) repo and uses Vue.js, vue-router and browserify to keep everyting nicely separated, and makes use of Laravel Elixir to avoid a huge Gulpfile.
 
-## Usage
+## Setting up a local development environment
 
 ### Step 1: Install the dependencies
 This will install the dependencies of this starter website. It will pull in several packages like Vue, Vueify, vue-router, gulp and Laravel Elixir (this is just magic syntactical sugar for gulp, basically).
@@ -28,8 +27,6 @@ As discussed in Step 2, you can opt to build for another environment, for exampl
 APP_ENV=production gulp
 ```
 
-Note, this will work on Linux and MacOSX. If somebody knows how to do this properly from the command line in Windows (or if it's the same) please fork the repo and send a PR for this README.
-
 ### Step 4: Serve it
 You can now serve the files using your webserver of choice.
 If you would like to start a simple ad-hoc webserver to test this out, you can use the following one-liner:
@@ -39,20 +36,5 @@ python -m SimpleHTTPServer 8888
 ```
 and then hit http://localhost:8888
 
-Or even better, you can use browser-sync and have your site auto-reload when changes are detected, which is ideal when developing.
-```
-npm install -g browser-sync
-cd public/
-browser-sync start --server --files "js/*.js, css/*.css"
-```
-browser-sync will then output the URL's on which you can access the site.
-
-### Step 5: Login
-If you followed the instructions in the companion repo and chose to use db:seed, you can now login using the following credentials:
-```
-username: admin@example.com
-password: admin
-```
-
 ## License
-MIT License. See LICENSE file.
+The web site is licensed under the terms of the MIT License.
